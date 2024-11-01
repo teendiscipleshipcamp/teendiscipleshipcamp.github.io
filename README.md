@@ -1,1 +1,1 @@
-# teendiscipleshipcamp.github.io
+# Website for the Mangawhai Teen Discipleship Camp
