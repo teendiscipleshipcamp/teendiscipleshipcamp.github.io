@@ -1,9 +1,9 @@
+import { BladeHeader } from './bladeparts/BladeHeader.tsx';
+
 export const GalleryBlade = () => (
 	<section id='gallery'>
 		<div class='inner'>
-			<header class='major'>
-				<h2>Gallery</h2>
-			</header>
+			<BladeHeader content='Gallery' />
 			<p>Check out pictures from camp.</p>
 			<ul class='actions'>
 				<li>

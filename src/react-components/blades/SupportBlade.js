@@ -1,9 +1,9 @@
+import { BladeHeader } from './bladeparts/BladeHeader.tsx';
+
 export const SupportBlade = () => (
 	<section id='support'>
 		<div class='inner'>
-			<header class='major'>
-				<h2>Support a camper.</h2>
-			</header>
+			<BladeHeader content='Support a camper.' />
 			<p>
 				As our heart is to ensure young people are able to come to camp, we keep
 				costs to a minimum.
