@@ -1,5 +1,5 @@
 import { Header } from './react-components/Header.js';
-import { ContactBlade } from './react-components/blades/ContactBlade.js';
+import { ContactBlade } from './react-components/blades/ContactBlade.tsx';
 import { GalleryBlade } from './react-components/blades/GalleryBlade.js';
 import { Footer } from './react-components/Footer.js';
 import { SupportBlade } from './react-components/blades/SupportBlade.js';
