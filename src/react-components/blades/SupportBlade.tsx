@@ -1,6 +1,9 @@
+import { FC } from 'react';
 import { BladeHeader } from './bladeparts/BladeHeader.tsx';
+import React from 'react';
+import { observer } from 'mobx-react-lite';
 
-export const SupportBlade = () => (
+const SupportBladeInternal: FC = () => (
 	<section id='support'>
 		<div class='inner'>
 			<BladeHeader content='Support a camper.' />
@@ -14,3 +17,5 @@ export const SupportBlade = () => (
 		</div>
 	</section>
 );
+
+export const SupportBlade = observer(SupportBladeInternal);

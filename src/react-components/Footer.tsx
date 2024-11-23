@@ -1,4 +1,7 @@
-export const Footer = () => (
+import { observer } from "mobx-react-lite";
+import React, { FC } from "react";
+
+const FooterInternal: FC = () => (
 	<footer id='footer'>
 		<div class='inner'>
 			<ul class='icons'>
@@ -22,7 +25,13 @@ export const Footer = () => (
 						<span class='label'>LinkedIn</span>
 					</a>
 				</li>
+				<li>
+					<span class='label'>v1.0.0</span>
+				</li>
 			</ul>
 		</div>
 	</footer>
 );
+
+export const Footer = observer(FooterInternal);
+

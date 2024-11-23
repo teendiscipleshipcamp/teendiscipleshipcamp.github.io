@@ -1,4 +1,7 @@
-export const Menu = () => (
+import { observer } from "mobx-react-lite";
+import React, { FC } from "react";
+
+const MenuInternal: FC = () => (
 	<nav id='menu'>
 		<ul class='links'>
 			<li>
@@ -22,3 +25,5 @@ export const Menu = () => (
 		</ul>
 	</nav>
 );
+
+export const Menu = observer(MenuInternal);

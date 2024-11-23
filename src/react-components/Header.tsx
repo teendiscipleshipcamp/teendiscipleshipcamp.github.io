@@ -1,4 +1,7 @@
-export const Header = () => (
+import { observer } from "mobx-react-lite";
+import React, { FC } from "react";
+
+const HeaderInternal: FC = () => (
 	<header id='header' class='alt'>
 		<a href='index.html' class='logo'>
 			<strong>
@@ -10,3 +13,5 @@ export const Header = () => (
 		</nav>
 	</header>
 );
+
+export const Header = observer(HeaderInternal);

@@ -1,4 +1,8 @@
-export const MainBanner = () => (
+import { observer } from 'mobx-react-lite';
+import React from 'react';
+import { FC } from 'react';
+
+const MainBannerInternal: FC = () => (
 	<section id='banner' class='major'>
 		<div class='inner'>
 			<header class='major'>
@@ -17,3 +21,5 @@ export const MainBanner = () => (
 		</div>
 	</section>
 );
+
+export const MainBanner = observer(MainBannerInternal);

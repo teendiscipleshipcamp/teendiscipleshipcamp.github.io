@@ -1,4 +1,7 @@
-export const SpotlightsBlade = () => (
+import { observer } from "mobx-react-lite";
+import React, { FC } from "react";
+
+const SpotlightsBladeInternal: FC = () => (
 	<section class='spotlights'>
 		<section id='what-we-believe'>
 			<a href='generic.html' class='image'>
@@ -53,3 +56,5 @@ export const SpotlightsBlade = () => (
 		</section>
 	</section>
 );
+
+export const SpotlightsBlade = observer(SpotlightsBladeInternal);

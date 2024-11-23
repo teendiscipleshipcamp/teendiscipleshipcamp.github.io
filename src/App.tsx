@@ -1,13 +1,15 @@
-import { Header } from './react-components/Header.js';
+import { Header } from './react-components/Header.tsx';
 import { ContactBlade } from './react-components/blades/ContactBlade.tsx';
-import { GalleryBlade } from './react-components/blades/GalleryBlade.js';
-import { Footer } from './react-components/Footer.js';
-import { SupportBlade } from './react-components/blades/SupportBlade.js';
-import { SpotlightsBlade } from './react-components/blades/SpotlightsBlade.js';
-import { MainBanner } from './react-components/MainBanner.js';
-import { Menu } from './react-components/Menu.js';
+import { GalleryBlade } from './react-components/blades/GalleryBlade.tsx';
+import { Footer } from './react-components/Footer.tsx';
+import { SupportBlade } from './react-components/blades/SupportBlade.tsx';
+import { SpotlightsBlade } from './react-components/blades/SpotlightsBlade.tsx';
+import { MainBanner } from './react-components/MainBanner.tsx';
+import { Menu } from './react-components/Menu.tsx';
+import { FC } from 'react';
+import React from 'react';
 
-const App = () => (
+const App: FC = () => (
 	<html>
 		<head>
 			<title>Teen Discipleship Camp</title>

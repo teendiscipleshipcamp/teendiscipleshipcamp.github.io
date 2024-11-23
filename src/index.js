@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './assets/css/fontawesome-all.min.css';
 import './assets/css/main.css';
 import './assets/css/noscript.css';
-import App from './App';
+import App from './App.tsx';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
