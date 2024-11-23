@@ -2,8 +2,8 @@ import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 
 const HeaderInternal: FC = () => (
-	<header id='header' class='alt'>
-		<a href='index.html' class='logo'>
+	<header id='header' className='alt'>
+		<a href='index.html' className='logo'>
 			<strong>
 				<img height='80px' width='420px' src='src/logo/campfire.svg' />
 			</strong>

@@ -13,7 +13,7 @@ const App: FC = () => (
 	<html>
 		<head>
 			<title>Teen Discipleship Camp</title>
-			<meta charset='utf-8' />
+			<meta charSet='utf-8' />
 			<meta
 				name='viewport'
 				content='width=device-width, initial-scale=1, user-scalable=no'
@@ -23,7 +23,7 @@ const App: FC = () => (
 				<link rel='stylesheet' href='assets/css/noscript.css' />
 			</noscript>
 		</head>
-		<body class='is-preload'>
+		<body className='is-preload'>
 			<div id='wrapper'>
 				<Header />
 				<Menu />

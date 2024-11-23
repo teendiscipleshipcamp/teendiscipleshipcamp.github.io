@@ -3,30 +3,30 @@ import React, { FC } from "react";
 
 const FooterInternal: FC = () => (
 	<footer id='footer'>
-		<div class='inner'>
-			<ul class='icons'>
+		<div className='inner'>
+			<ul className='icons'>
 				<li>
-					<a href='#' class='icon brands alt fa-twitter'>
-						<span class='label'>Twitter</span>
+					<a href='#' className='icon brands alt fa-twitter'>
+						<span className='label'>Twitter</span>
 					</a>
 				</li>
 				<li>
-					<a href='#' class='icon brands alt fa-facebook-f'>
-						<span class='label'>Facebook</span>
+					<a href='#' className='icon brands alt fa-facebook-f'>
+						<span className='label'>Facebook</span>
 					</a>
 				</li>
 				<li>
-					<a href='#' class='icon brands alt fa-instagram'>
-						<span class='label'>Instagram</span>
+					<a href='#' className='icon brands alt fa-instagram'>
+						<span className='label'>Instagram</span>
 					</a>
 				</li>
 				<li>
-					<a href='#' class='icon brands alt fa-linkedin-in'>
-						<span class='label'>LinkedIn</span>
+					<a href='#' className='icon brands alt fa-linkedin-in'>
+						<span className='label'>LinkedIn</span>
 					</a>
 				</li>
 				<li>
-					<span class='label'>v1.0.0</span>
+					<span className='label'>v1.0.0</span>
 				</li>
 			</ul>
 		</div>

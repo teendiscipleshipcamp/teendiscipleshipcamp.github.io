@@ -5,7 +5,7 @@ import { observer } from 'mobx-react-lite';
 
 const SupportBladeInternal: FC = () => (
 	<section id='support'>
-		<div class='inner'>
+		<div className='inner'>
 			<BladeHeader content='Support a camper.' />
 			<p>
 				As our heart is to ensure young people are able to come to camp, we keep

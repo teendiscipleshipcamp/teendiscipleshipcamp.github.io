@@ -2,16 +2,16 @@ import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 
 const SpotlightsBladeInternal: FC = () => (
-	<section class='spotlights'>
+	<section className='spotlights'>
 		<section id='what-we-believe'>
-			<a href='generic.html' class='image'>
+			<a href='generic.html' className='image'>
 				<img src='/public/pic08.jpg' alt='' data-position='center center' />
 				<img src='./public/pic08.jpg' alt='' data-position='center center' />
 				<img src='../public/pic08.jpg' alt='' data-position='center center' />
 			</a>
-			<div class='content'>
-				<div class='inner'>
-					<header class='major'>
+			<div className='content'>
+				<div className='inner'>
+					<header className='major'>
 						<h3>What we believe.</h3>
 					</header>
 					<p>
@@ -21,9 +21,9 @@ const SpotlightsBladeInternal: FC = () => (
 						born out of our vision to build, grow, and equip our young people to
 						take their faith seriously.
 					</p>
-					<ul class='actions'>
+					<ul className='actions'>
 						<li>
-							<a href='generic.html' class='button'>
+							<a href='generic.html' className='button'>
 								statement of faith
 							</a>
 						</li>
@@ -32,21 +32,21 @@ const SpotlightsBladeInternal: FC = () => (
 			</div>
 		</section>
 		<section id='sign-up'>
-			<a href='generic.html' class='image'>
+			<a href='generic.html' className='image'>
 				<img src='images/pic09.jpg' alt='' data-position='top center' />
 			</a>
-			<div class='content'>
-				<div class='inner'>
-					<header class='major'>
+			<div className='content'>
+				<div className='inner'>
+					<header className='major'>
 						<h3>Sign up.</h3>
 					</header>
 					<p>
 						Keen to be a part of our upcoming camp? Sign up below, or contact us
 						for more info!
 					</p>
-					<ul class='actions'>
+					<ul className='actions'>
 						<li>
-							<a href='generic.html' class='button'>
+							<a href='generic.html' className='button'>
 								Sign up
 							</a>
 						</li>

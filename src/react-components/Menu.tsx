@@ -3,7 +3,7 @@ import React, { FC } from "react";
 
 const MenuInternal: FC = () => (
 	<nav id='menu'>
-		<ul class='links'>
+		<ul className='links'>
 			<li>
 				<a href='#banner'>Home</a>
 			</li>
