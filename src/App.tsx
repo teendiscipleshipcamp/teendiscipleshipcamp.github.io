@@ -9,6 +9,8 @@ import { Menu } from './react-components/Menu.tsx';
 import { FC } from 'react';
 import React from 'react';
 import { LeadOrHelpBlade } from './react-components/blades/LeadOrHelpBlade.tsx';
+import campfire from './logo/campfire.svg';
+import GlyphCampfire from './glyphs/GlyphCampfire.tsx';
 
 const App: FC = () => (
 	<html>
@@ -24,10 +26,23 @@ const App: FC = () => (
 				<link rel='stylesheet' href='assets/css/noscript.css' />
 			</noscript>
 		</head>
+		<div className='menu-wrapper'>
+			<div>Logo
+
+			<a href='index.html' className='logo'>
+				<img height='40px' width='40px' src={campfire} id="logo"/>
+			</a>
+			<GlyphCampfire fill='white'  />
+
+			</div>
+			<div>
+				<button className='fa fa-bars'/>
+			</div>
+		</div>
 		<body className='is-preload'>
 			<div id='wrapper'>
-				<Header />
-				<Menu />
+				{/* <Header />
+				<Menu /> */}
 				<MainBanner />
 				<div id='main' role='main'>
 					<SpotlightsBlade />
@@ -39,13 +54,13 @@ const App: FC = () => (
 				<Footer />
 			</div>
 
-			{/* <script src='assets/js/jquery.min.js'></script>
+			<script src='assets/js/jquery.min.js'></script>
 			<script src='assets/js/jquery.scrolly.min.js'></script>
 			<script src='assets/js/jquery.scrollex.min.js'></script>
-			<script src='assets/js/browser.min.js'></script> */}
-			{/* <script src='assets/js/breakpoints.min.js'></script> */}
-			{/* <script src='assets/js/util.js'></script>
-			<script src='assets/js/main.js'></script> */}
+			<script src='assets/js/browser.min.js'></script>
+			<script src='assets/js/breakpoints.min.js'></script>
+			<script src='assets/js/util.js'></script>
+			<script src='assets/js/main.js'></script>
 		</body>
 	</html>
 );

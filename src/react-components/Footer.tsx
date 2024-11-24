@@ -26,7 +26,7 @@ const FooterInternal: FC = () => (
 					</a>
 				</li>
 				<li>
-					<span className='label'>v1.0.0</span>
+					<span className='label'>v1.1</span>
 				</li>
 			</ul>
 		</div>

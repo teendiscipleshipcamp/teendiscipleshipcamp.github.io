@@ -1,9 +1,43 @@
-/* #what-we-believe {
-	display: flex;
-	flex-direction: row-reverse;
-	gap: 10%;
-} */
-
 #gallery {
 	background-color: #333856;
 }
+
+#message {
+	resize: none;
+}
+
+#logo {
+	border: 1px solid white;
+}
+
+/* MENU */
+.menu-wrapper {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 99999999999;
+	background-color: rgba(0, 0, 0, 0.25);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px;
+}
+
+@media screen and (max-width: 980px) {
+	.menu-wrapper {
+		padding: 0 3em;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.menu-wrapper {
+		padding: 0 1.5em;
+	}
+}
+
+/* * {
+	outline: 1px solid red !important;
+	background-color: rgba(255, 0, 0, 0.1) !important;
+} */
