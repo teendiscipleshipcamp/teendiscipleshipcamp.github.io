@@ -1,7 +1,6 @@
 import { observer } from 'mobx-react-lite';
 import { BladeHeader } from './bladeparts/BladeHeader.tsx';
-import { FC } from 'react';
-import React from 'react';
+import React, { FC } from 'react';
 
 const GalleryBladeInternal: FC = () => (
 	<section id='gallery'>

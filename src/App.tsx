@@ -8,6 +8,7 @@ import { MainBanner } from './react-components/MainBanner.tsx';
 import { Menu } from './react-components/Menu.tsx';
 import { FC } from 'react';
 import React from 'react';
+import { LeadOrHelpBlade } from './react-components/blades/LeadOrHelpBlade.tsx';
 
 const App: FC = () => (
 	<html>
@@ -30,6 +31,7 @@ const App: FC = () => (
 				<MainBanner />
 				<div id='main' role='main'>
 					<SpotlightsBlade />
+					<LeadOrHelpBlade />
 					<GalleryBlade />
 					<SupportBlade />
 				</div>

@@ -1,0 +1,9 @@
+/* #what-we-believe {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 10%;
+} */
+
+#gallery {
+	background-color: #333856;
+}
