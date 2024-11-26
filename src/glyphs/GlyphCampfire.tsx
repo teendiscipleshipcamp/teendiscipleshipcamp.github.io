@@ -1,16 +1,10 @@
 import React from "react";
 import { FC } from "react";
+import { GlyphProps } from "./Glyph";
 
-interface Props {
-    fill?: string;
-    heightInPx?: number;
-    widthInPx?: number;
-}
-
-const GlyphCampfire: FC<Props> = ({ fill = '#000000', heightInPx = '40px', widthInPx = '40px' }) => {
-return (
+const GlyphCampfire: FC<GlyphProps> = ({ fill = '#000000', heightInPx = '40px', widthInPx = '40px' }) => (
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-        width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
+        width={heightInPx} height={widthInPx} viewBox="0 0 200.000000 200.000000"
         preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
             fill={fill} stroke="none">
@@ -27,6 +21,5 @@ return (
         </g>
     </svg>
 );
-}
 
 export default GlyphCampfire;
