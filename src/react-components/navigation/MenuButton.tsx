@@ -5,19 +5,7 @@ import Glyph from "../../glyphs/Glyph.tsx";
 const MenuButtonInternal: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-        console.error("toggle menu");
-        setIsOpen((isOpen) => !isOpen);
-    }
-
-    // const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    //     event.preventDefault();
-
-    //     toggleMenu();
-    //     // Show menu options
-
-    // }
-
+    const toggleMenu = () => setIsOpen((isOpen) => !isOpen);
 
     return (       
         <>
@@ -26,7 +14,7 @@ const MenuButtonInternal: FC = () => {
             <Glyph fill='white' type={'menu'} />
         </button>
         {isOpen && (
-            <div id="overlay">
+            <div className={`overlay ${isOpen ? 'active': ''}`}>
 
                 <div className='menu-links'>
                     <div>

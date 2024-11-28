@@ -3467,6 +3467,7 @@ body.is-preload #header.alt {
 	-ms-align-items: center;
 	align-items: center;
 	background-image: url('../../images/bonfire.jpg');
+	position: static;
 	display: -moz-flex;
 	display: -webkit-flex;
 	display: -ms-flex;
@@ -3620,7 +3621,7 @@ body.is-preload #banner > .inner {
 	opacity: 0;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 760px) {
 	#banner {
 		background-attachment: scroll;
 	}
