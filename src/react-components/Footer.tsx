@@ -26,11 +26,19 @@ const FooterInternal: FC = () => (
 					</a>
 				</li>
 				<li>
-					<span className='label'>v1.2</span>
+					
 				</li>
 			</ul>
 		</div>
+		<section id='dev-info'>
+			{/* <div className='inner'> */}
+				{/* <section className='split'> */}
+					<span id='label'>release-1.3.1</span>
+				{/* </section> */}
+			{/* </div> */}
+		</section>
 	</footer>
+
 );
 
 export const Footer = observer(FooterInternal);

@@ -7,15 +7,15 @@ import { ContactInformation } from "../ContactInformation.tsx";
 const ContactBladeInternal: FC = () => {
 	return (
 		<section id='contact'>
-		<div className='inner'>
-			<section>
-				<ContactForm/>
-			</section>
-			<section className='split'>
-				<ContactInformation/>
-			</section>
-		</div>
-	</section>
+			<div className='inner'>
+				<section>
+					<ContactForm/>
+				</section>
+				<section className='split'>
+					<ContactInformation/>
+				</section>
+			</div>
+		</section>
 	);
 }
 
