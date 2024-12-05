@@ -1,6 +1,7 @@
 import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
-import bladeImage from '../../images/pic08.jpg';
+import beliefImage from '../../images/belief_pic.jpg';
+import signUpImage from '../../images/scenery.jpg';
 
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
@@ -8,7 +9,7 @@ const WhatWeBelieveSection: FC = () => {
 	return (
 		<section id='what-we-believe'>
 			<div className='image'>
-				<img src={bladeImage} alt='' data-position='top center' />
+				<img src={beliefImage} alt='' data-position='top center' />
 			</div>
 			<div className='content'>
 				<div className='inner'>
@@ -18,15 +19,13 @@ const WhatWeBelieveSection: FC = () => {
 					<p>
 						It’s no secret that many of our teens leave home, enter the world,
 						and walk away from their faith. We want to engage our teens in
-						wrestling with questions they may have and face. This camp has been
-						born out of our vision to build, grow, and equip our young people to
-						take their faith seriously.
+						wrestling with questions they may have and face.
 					</p>
 					<ul className='actions'>
 						<li>
-						<a href={statementOfFaithLink} target="_blank" className='button' rel="noreferrer">
-										statement of faith
-									</a>
+							<a href={statementOfFaithLink} target="_blank" className='button' rel="noreferrer">
+								statement of faith
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -41,7 +40,7 @@ const SignUpSection: FC = () => {
 	return (
 		<section id='sign-up'>
 		<div className='image'>
-			<img src={bladeImage} alt='' data-position='top center' />
+			<img src={signUpImage} alt='' data-position='top center' />
 		</div>
 		<div className='content'>
 			<div className='inner'>

@@ -145,6 +145,11 @@ a {
 	font-size: small;
 }
 
+#contact {
+	border-top: 1px solid #d4d4ff1a;
+	background: linear-gradient(135deg, #333856, #232943, #333856);
+}
+
 /* * {
 	outline: 1px solid red !important;
 	background-color: rgba(255, 0, 0, 0.1) !important;
