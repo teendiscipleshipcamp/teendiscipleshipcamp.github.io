@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 const GalleryBladeInternal: FC = () => (
 	<section id='gallery'>
 		<div className='inner'>
-			<BladeHeader content='Gallery' />
+			<BladeHeader content='Gallery.' />
 			<p>Check out pictures from camp.</p>
 			<ul className='actions'>
 				<li>

@@ -20,7 +20,7 @@ const App: FC = () => (
 				<div id='main' role='main'>
 					<SpotlightsBlade />
 					<LeadOrHelpBlade />
-					<GalleryBlade />
+					{/* <GalleryBlade /> */}
 					<SupportBlade />
 				</div>
 				<ContactBlade />

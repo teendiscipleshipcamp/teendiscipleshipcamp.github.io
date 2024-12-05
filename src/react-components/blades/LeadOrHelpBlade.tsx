@@ -8,7 +8,7 @@ const LeadOrHelpInternal: FC = () => {
     return (
         <section id='lead-or-help'>
             <div className='inner'>
-                <BladeHeader content='Lead' />
+                <BladeHeader content='Lead.' />
                 <p>Keen to lead at one of our camps, or use your gifts to help? We're always looking for more people to join our team!
                 Reach out to us below if you have any questions or would like to get involved, or sign up to lead at our next camp below.</p>
                 <ul className='actions'>

@@ -2,6 +2,7 @@ import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 import beliefImage from '../../images/belief_pic.jpg';
 import signUpImage from '../../images/scenery.jpg';
+import galleryImage from '../../images/gallery-image.png';
 
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
@@ -64,10 +65,41 @@ const SignUpSection: FC = () => {
 	);
 };
 
+
+const GallerySection: FC = () => {
+	const galleryLink = '';
+
+	return (
+		<section id='gallery'>
+			<div className='image'>
+				<img src={galleryImage} alt='' data-position='top center' />
+			</div>
+			<div className='content'>
+				<div className='inner'>
+					<header className='major'>
+						<h3>Gallery.</h3>
+					</header>
+					<p>
+						Check out pictures from camp.
+					</p>
+					<ul className='actions'>
+						<li>
+							<a href={galleryLink} target="_blank" className='button' rel="noreferrer">
+								See Them
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	);
+};
+
 const SpotlightsBladeInternal: FC = () => (
 	<section className='spotlights'>
 		<WhatWeBelieveSection />
 		<SignUpSection />
+		<GallerySection />
 	</section>
 );
 

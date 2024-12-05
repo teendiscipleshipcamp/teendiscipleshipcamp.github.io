@@ -7,6 +7,13 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+:root {
+	/* --main-background-blue: #2a2f4a; */
+	--main-background-blue: #0e2a3f;
+	/* --secondary-background: #2e3450; */
+	--secondary-background: #225170;
+}
+
 html,
 body,
 div,
@@ -188,7 +195,7 @@ html {
 }
 
 body {
-	background: #242943;
+	background: var(--main-background-blue);
 }
 
 body.is-preload *,
@@ -2052,7 +2059,7 @@ select {
 
 select option {
 	color: #ffffff;
-	background: #242943;
+	background: var(--main-background-blue);
 }
 
 select:focus::-ms-value {
@@ -2138,7 +2145,7 @@ input[type='radio']:checked + label:before {
 	background: #ffffff;
 	border-color: #9bf1ff;
 	content: '\f00c';
-	color: #242943;
+	color: var(--main-background-blue);
 }
 
 input[type='checkbox']:focus + label:before,
@@ -2230,7 +2237,7 @@ input[type='radio'] + label:before {
 .icon.alt:before {
 	background-color: #ffffff;
 	border-radius: 100%;
-	color: #242943;
+	color: var(--main-background-blue);
 	display: inline-block;
 	height: 2em;
 	line-height: 2em;
@@ -2491,12 +2498,12 @@ ul.pagination li > .page {
 
 ul.pagination li > .page.active {
 	background-color: #ffffff;
-	color: #242943;
+	color: var(--main-background-blue);
 }
 
 ul.pagination li > .page.active:hover {
 	background-color: #9bf1ff;
-	color: #242943 !important;
+	color: var(--main-background-blue) !important;
 }
 
 ul.pagination li > .page.active:active {
@@ -2769,7 +2776,7 @@ button.primary,
 .button.primary {
 	background-color: #ffffff;
 	box-shadow: none;
-	color: #242943;
+	color: var(--main-background-blue);
 }
 
 input[type='submit'].primary:hover,
@@ -2783,7 +2790,7 @@ button.primary:active,
 .button.primary:hover,
 .button.primary:active {
 	background-color: #9bf1ff;
-	color: #242943 !important;
+	color: var(--main-background-blue) !important;
 }
 
 input[type='submit'].primary:active,
@@ -3033,7 +3040,7 @@ button:disabled,
 	-webkit-flex-direction: row-reverse;
 	-ms-flex-direction: row-reverse;
 	flex-direction: row-reverse;
-	background-color: #2e3450;
+	background-color: var(--secondary-background);
 }
 
 .spotlights > section > .image {
@@ -3095,7 +3102,7 @@ button:disabled,
 	-webkit-flex-direction: row;
 	-ms-flex-direction: row;
 	flex-direction: row;
-	background-color: #333856;
+	background-color: transparent;
 }
 
 .spotlights > section:nth-child(2n) > .content {
@@ -3201,7 +3208,7 @@ button:disabled,
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
-	background-color: #2a2f4a;
+	background-color: var(--main-background-blue);
 	box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
 	cursor: default;
 	font-weight: 600;
@@ -3232,7 +3239,7 @@ button:disabled,
 	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	/* background-color: #ffffff; */
-	color: #242943;
+	color: var(--main-background-blue);
 	display: inline-block;
 	line-height: 1.65em;
 	margin-right: 0.325em;
@@ -3497,7 +3504,7 @@ body.is-preload #header.alt {
 	-ms-transition-delay: 0.75s;
 	transition-delay: 0.75s;
 	pointer-events: none;
-	background-color: #242943;
+	background-color: var(--main-background-blue);
 	content: '';
 	display: block;
 	height: 100%;
@@ -3674,7 +3681,7 @@ body.is-preload #banner > .inner {
 /* Main */
 
 #main {
-	background-color: #2a2f4a;
+	background-color: transparent;
 }
 
 #main > * {
