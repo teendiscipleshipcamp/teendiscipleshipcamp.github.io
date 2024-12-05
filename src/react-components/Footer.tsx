@@ -31,11 +31,7 @@ const FooterInternal: FC = () => (
 			</ul>
 		</div>
 		<section id='dev-info'>
-			{/* <div className='inner'> */}
-				{/* <section className='split'> */}
-					<span id='label'>release-1.3.1</span>
-				{/* </section> */}
-			{/* </div> */}
+			<span id='label'>release-1.3.1</span>
 		</section>
 	</footer>
 
