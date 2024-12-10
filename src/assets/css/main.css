@@ -11,7 +11,7 @@
 	/* --main-background-blue: #2a2f4a; */
 	--main-background-blue: #0e2a3f;
 	/* --secondary-background: #2e3450; */
-	--secondary-background: #225170;
+	--secondary-background: #22517055;
 }
 
 html,
@@ -3056,6 +3056,7 @@ button:disabled,
 	border-radius: 0;
 	display: block;
 	width: 100%;
+	height: 100%;
 }
 
 .spotlights > section > .image:before {
