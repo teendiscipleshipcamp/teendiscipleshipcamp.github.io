@@ -2,7 +2,7 @@ import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 import beliefImage from '../../images/belief_pic.jpg';
 import signUpImage from '../../images/scenery.jpg';
-import galleryImage from '../../images/gallery-image.png';
+import galleryImage from '../../images/culled.jpg';
 
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
