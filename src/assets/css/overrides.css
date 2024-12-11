@@ -169,11 +169,6 @@ a {
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
 }
 
-/* * {
-	outline: 1px solid red !important;
-	background-color: rgba(255, 0, 0, 0.1) !important;
-} */
-
 @keyframes blur {
 	0% {
 		-webkit-filter: blur(0px);

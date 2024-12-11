@@ -24,8 +24,6 @@ const App: FC = () => (
 				</div>
 				<ContactBlade />
 				<Footer />
-
-				
 			</div>
 		</body>
 	</html>
