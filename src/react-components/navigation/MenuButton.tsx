@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import Glyph from "../../glyphs/Glyph.tsx";
 
 interface Props {
