@@ -1,20 +1,41 @@
 import { observer } from "mobx-react-lite";
-import React, { FC, useState } from "react";
+import React, { FC, useCallback, useMemo, useState } from "react";
 import { MenuButton } from "./MenuButton.tsx";
 import { Logo } from "./Logo.tsx";
 import Glyph from "../../glyphs/Glyph.tsx";
+
+const updatedMenuItems = [
+    { href: '#banner', label: 'Home' },
+    { href: '#what-we-believe', label: 'What we believe' },
+    { href: '#sign-up', label: 'Sign up' },
+    { href: '#gallery', label: 'Gallery' },
+    { href: '#support', label: 'Support us' },
+    { href: '#contact', label: 'Contact us' }
+];
 
 const MainNavInternal: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen((isOpen) => !isOpen);
 
+    const scrollToSection = useCallback((id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            window.scrollTo({
+                top: element.offsetTop - 100,
+                behavior: 'smooth'
+            });
+            setIsOpen(false);
+        }
+    }, [setIsOpen]);
+
     return (
-        <><div className={`menu-wrapper`}>
-            <div className='menu-items'>
-                <Logo />
-                <MenuButton toggleMenu={toggleMenu}/>
+        <>
+            <div className={`menu-wrapper`}>
+                <div className='menu-items'>
+                    <Logo />
+                    <MenuButton toggleMenu={toggleMenu} />
+                </div>
             </div>
-        </div><>
             {isOpen && (
                 <div className={`overlay ${isOpen ? 'active' : ''}`}>
                     <div className='menu-links'>
@@ -23,29 +44,25 @@ const MainNavInternal: FC = () => {
                                 <Glyph fill='white' type={'menu-close'} />
                             </button>
                         </div>
-                        <div>
-                            <a href='#banner' onClick={toggleMenu}>Home</a>
-                        </div>
-                        <div>
-                            <a href='#what-we-believe' onClick={toggleMenu}>What we believe</a>
-                        </div>
-                        <div>
-                            <a href='#sign-up' onClick={toggleMenu}>Sign up</a>
-                        </div>
-                        <div>
-                            <a href='#gallery' onClick={toggleMenu}>Gallery</a>
-                        </div>
-                        <div>
-                            <a href='#support' onClick={toggleMenu}>Support us</a>
-                        </div>
-                        <div>
-                            <a href='#contact' onClick={toggleMenu}>Contact us</a>
-                        </div>
+                        {updatedMenuItems.map((item) => (
+                            <div key={item.href}>
+                                <a
+                                    href={item.href}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToSection(item.href.substring(1));
+                                    }}
+                                >
+                                    {item.label}
+                                </a>
+                            </div>
+                        ))}
                     </div>
-                </div>)}
-            </></>
-        
+                </div>
+            )}
+        </>
     );
 };
+
 
 export const MainNav = observer(MainNavInternal);
