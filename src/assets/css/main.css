@@ -12,6 +12,7 @@
 	--main-background-blue: #0e2a3f;
 	/* --secondary-background: #2e3450; */
 	--secondary-background: #22517055;
+	--main-text-color: #ffffff;
 }
 
 html,
@@ -204,7 +205,7 @@ body,
 input,
 select,
 textarea {
-	color: #ffffff;
+	color: var(--main-text-color);
 	font-family: 'Source Sans Pro', Helvetica, sans-serif;
 	font-size: 17pt;
 	font-weight: 300;
@@ -246,7 +247,7 @@ a {
 	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	border-bottom: dotted 1px;
-	color: inherit;
+	color: var(--main-text-color);
 	text-decoration: none;
 }
 
@@ -261,7 +262,7 @@ a:active {
 
 strong,
 b {
-	color: #ffffff;
+	color: var(--main-text-color);
 	font-weight: 600;
 }
 
@@ -280,7 +281,7 @@ h3,
 h4,
 h5,
 h6 {
-	color: #ffffff;
+	color: var(--main-text-color);
 	font-weight: 600;
 	line-height: 1.65;
 	margin: 0 0 1em 0;
@@ -1979,7 +1980,7 @@ form > .fields > .field.quarter {
 }
 
 label {
-	color: #ffffff;
+	color: var(--main-text-color);
 	display: block;
 	font-size: 0.8em;
 	font-weight: 600;
@@ -2045,7 +2046,7 @@ select {
 }
 
 select option {
-	color: #ffffff;
+	color: var(--main-text-color);
 	background: var(--main-background-blue);
 }
 
@@ -2088,7 +2089,7 @@ input[type='radio'] {
 input[type='checkbox'] + label,
 input[type='radio'] + label {
 	text-decoration: none;
-	color: #ffffff;
+	color: var(--main-text-color);
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 300;
@@ -2542,7 +2543,7 @@ table td {
 }
 
 table th {
-	color: #ffffff;
+	color: var(--main-text-color);
 	font-size: 0.9em;
 	font-weight: 600;
 	padding: 0 0.75em 0.75em 0.75em;
@@ -2605,8 +2606,8 @@ button,
 	background-color: transparent;
 	border: 0;
 	border-radius: 0;
-	box-shadow: inset 0 0 0 2px #ffffff;
-	color: #ffffff;
+	box-shadow: inset 0 0 0 2px var(--main-text-color);
+	color: var(--main-text-color);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0.8em;
@@ -3226,7 +3227,6 @@ button:disabled,
 	-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	/* background-color: #ffffff; */
 	color: var(--main-background-blue);
 	display: inline-block;
 	line-height: 1.65em;
