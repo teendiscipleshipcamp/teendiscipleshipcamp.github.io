@@ -20,18 +20,10 @@ const props = {
 
 
 const ContactFormInternal: FC = () => {
-	const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;// 'service_xa3xje9';
-	const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;//'template_8zbzu4t';
-	const EMAILJS_PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;//'2n9paRn-soyQjDywu';
+	const EMAILJS_SERVICE_ID = 'service_xa3xje9';
+	const EMAILJS_TEMPLATE_ID = 'template_8zbzu4t';
+	const EMAILJS_PUBLIC_KEY = '2n9paRn-soyQjDywu';
 	const form = useRef<HTMLFormElement | null>(null);
-
-	console.error('REACT_APP_EMAILJS_SERVICE_ID', process.env.REACT_APP_EMAILJS_SERVICE_ID);
-	console.error('REACT_APP_EMAILJS_TEMPLATE_ID', process.env.REACT_APP_EMAILJS_TEMPLATE_ID);
-	console.error('REACT_APP_EMAILJS_PUBLIC_KEY', process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
-  
-	console.error('EMAILJS_SERVICE_ID', process.env.EMAILJS_SERVICE_ID);
-	console.error('TEMPLATE_ID', process.env.TEMPLATE_ID);
-	console.error('EMAILJS_PUBLIC_KEY', process.env.EMAILJS_PUBLIC_KEY);
   
 	const sendEmail = (e) => {
 	  e.preventDefault();
