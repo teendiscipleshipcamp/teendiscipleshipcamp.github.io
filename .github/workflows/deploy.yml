@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - gh-pages
+      - feat/hide-api-key
 
 jobs:
   build:
