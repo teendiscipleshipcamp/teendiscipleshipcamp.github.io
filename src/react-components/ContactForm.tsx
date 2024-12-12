@@ -20,16 +20,19 @@ const props = {
 
 
 const ContactFormInternal: FC = () => {
-
-	const EMAILJS_SERVICE_ID = 'service_xa3xje9';
-	const EMAILJS_TEMPLATE_ID = 'template_8zbzu4t';
-	const EMAILJS_PUBLIC_KEY = '2n9paRn-soyQjDywu';
+	const EMAILJS_SERVICE_ID = process.env.EMAILJS_SERVICE_ID;// 'service_xa3xje9';
+	const EMAILJS_TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;//'template_8zbzu4t';
+	const EMAILJS_PUBLIC_KEY = process.env.EMAILJS_PUBLIC_KEY;//'2n9paRn-soyQjDywu';
 	const form = useRef<HTMLFormElement | null>(null);
   
 	const sendEmail = (e) => {
 	  e.preventDefault();
 
 	  if (form.current === null) return;
+
+	  const loadedVariablesSuccessfully = EMAILJS_SERVICE_ID !== undefined && EMAILJS_TEMPLATE_ID !== undefined && EMAILJS_PUBLIC_KEY !== undefined;
+	  
+	  if (!loadedVariablesSuccessfully) return toast.error("Sorry, couldn't load EmailJS", props);
   
 	  emailjs
 		.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, {
@@ -37,7 +40,7 @@ const ContactFormInternal: FC = () => {
 		})
 		.then(
 		  () => toast.success("Thank you!", props),
-		  (_) => toast.error("Sorry, try again.", props),
+		  (_) => toast.error("Sorry, try again", props),
 		).finally(() => form.current?.reset());
 	};
 
