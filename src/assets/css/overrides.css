@@ -169,6 +169,43 @@ a {
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+	#lead-or-help .inner,
+	#support .inner {
+		animation: text-slide-alt 1s linear forwards;
+		animation-timeline: view();
+		animation-range: entry;
+	}
+
+	@keyframes text-slide-alt {
+		from {
+			opacity: 0;
+			transform: scale(0.9);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	#contact {
+		animation: contact-form-fade 1s linear forwards;
+		animation-timeline: view();
+		animation-range: entry;
+	}
+
+	@keyframes contact-form-fade {
+		from {
+			transform: scale(0.9);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+}
+
 @keyframes blur {
 	0% {
 		-webkit-filter: blur(0px);
