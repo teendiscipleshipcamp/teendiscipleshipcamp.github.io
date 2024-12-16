@@ -31,7 +31,7 @@ const FooterInternal: FC = () => (
 			</ul>
 		</div>
 		<section id='dev-info'>
-			<span id='label'>release-1.4.0</span>
+			<span id='label'>release-1.5.0</span>
 		</section>
 	</footer>
 
