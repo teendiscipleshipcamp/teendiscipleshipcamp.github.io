@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import React, { FC, useCallback, useMemo, useState } from "react";
+import React, { FC, useCallback, useState } from "react";
 import { MenuButton } from "./MenuButton.tsx";
 import { Logo } from "./Logo.tsx";
 import Glyph from "../../glyphs/Glyph.tsx";

@@ -1034,7 +1034,7 @@ a.icon.alt:active:before {
 	position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) { */
 	.image {
 		animation: image-fade 1s linear forwards;
 		animation-timeline: view();
@@ -1049,7 +1049,7 @@ a.icon.alt:active:before {
 			opacity: 1;
 		}
 	}
-}
+/* } */
 
 .image img {
 	display: block;
@@ -1563,7 +1563,7 @@ button:disabled,
 	width: 65em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) { */
 	.spotlights > section > .content > .inner {
 		animation: text-slide 1s linear forwards;
 		animation-timeline: view();
@@ -1578,7 +1578,7 @@ button:disabled,
 			opacity: 1;
 		}
 	}
-}
+/* } */
 
 .spotlights > section:nth-child(2n) {
 	-moz-flex-direction: row;

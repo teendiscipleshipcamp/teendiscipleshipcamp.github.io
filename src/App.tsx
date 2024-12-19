@@ -1,5 +1,4 @@
 import { ContactBlade } from './react-components/blades/ContactBlade.tsx';
-import { GalleryBlade } from './react-components/blades/GalleryBlade.tsx';
 import { Footer } from './react-components/Footer.tsx';
 import { SupportBlade } from './react-components/blades/SupportBlade.tsx';
 import { SpotlightsBlade } from './react-components/blades/SpotlightsBlade.tsx';

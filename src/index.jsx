@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import './index.css';
 import './assets/css/fontawesome-all.min.css';
 import './assets/css/main.css';
 import './assets/css/noscript.css';
