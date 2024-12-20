@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import beliefImage from '../../images/belief_pic.jpg';
 import signUpImage from '../../images/scenery.jpg';
 import galleryImage from '../../images/culled.jpg';
-import { ImageSection } from "../bladeparts/ImageSection.tsx";
+import { Section } from "../bladeparts/Section.tsx";
 
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
@@ -12,7 +12,8 @@ const WhatWeBelieveSection: FC = () => {
 	const linkText = 'statement of faith';
 
 	return (
-		<ImageSection
+		<Section
+			id='what-we-believe'
 			imageSrc={beliefImage}
 			title={title}
 			description={description}
@@ -29,7 +30,8 @@ const SignUpSection: FC = () => {
 	const linkText = 'Sign up';
 
 	return (
-		<ImageSection
+		<Section
+			id='sign-up'
 			imageSrc={signUpImage}
 			title={title}
 			description={description}
@@ -45,7 +47,8 @@ const GallerySection: FC = () => {
 	const linkText = 'See Them';
 
 	return (
-		<ImageSection
+		<Section
+			id='gallery'
 			imageSrc={galleryImage}
 			title={title}
 			description={description}

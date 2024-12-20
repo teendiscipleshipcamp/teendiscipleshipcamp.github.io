@@ -3,6 +3,7 @@ import React, { FC, useCallback, useState } from "react";
 import { MenuButton } from "./MenuButton.tsx";
 import { Logo } from "./Logo.tsx";
 import Glyph from "../../glyphs/Glyph.tsx";
+import cn from "classnames";
 
 const updatedMenuItems = [
     { href: '#banner', label: 'Home' },
@@ -36,8 +37,8 @@ const MenuInternal: FC = () => {
                     <MenuButton toggleMenu={toggleMenu} />
                 </div>
             </div>
-            {isOpen && (
-                <div className={`overlay ${isOpen ? 'active' : ''}`}>
+            {(
+                <div className={cn('overlay', 'blur-in-section', { 'is-visible': isOpen})}>
                     <div className='menu-links'>
                         <div>
                             <button id="menu-bars-wrapper-close" onClick={toggleMenu}>

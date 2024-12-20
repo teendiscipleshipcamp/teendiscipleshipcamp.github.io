@@ -1482,12 +1482,6 @@ button:disabled,
 	text-align: center;
 	font-size: 24px;
 	border: none;
-
-	animation: blur 0.5s linear;
-}
-
-.overlay.active {
-	animation: blur 0.5s linear;
 }
 
 a {
@@ -1574,25 +1568,17 @@ a {
 	visibility: visible;
 }
 
-@keyframes blur {
-	0% {
-		-webkit-filter: blur(0px);
-		-moz-filter: blur(0px);
-		-o-filter: blur(0px);
-		-ms-filter: blur(0px);
-		-webkit-filter: opacity(0);
-		-moz-filter: opacity(0);
-		-o-filter: opacity(0);
-		-ms-filter: opacity(0);
-	}
-	100% {
-		-webkit-filter: blur(5px);
-		-moz-filter: blur(5px);
-		-o-filter: blur(5px);
-		-ms-filter: blur(5px);
-		-webkit-filter: opacity(1);
-		-moz-filter: opacity(1);
-		-o-filter: opacity(1);
-		-ms-filter: opacity(1);
-	}
+.blur-in-section {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 250ms ease-out, visibility 250ms ease-out,
+		filter 250ms ease-out;
+	will-change: opacity, visibility, filter;
+	filter: blur(5px);
+}
+
+.blur-in-section.is-visible {
+	opacity: 1;
+	visibility: visible;
+	filter: blur(0);
 }

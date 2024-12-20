@@ -12,5 +12,5 @@ export const config = {
 		EMAILJS_TEMPLATE_ID: 'template_8zbzu4t',
 		EMAILJS_PUBLIC_KEY: '2n9paRn-soyQjDywu',
 	},
-	version: '1.5.2',
+	version: '1.5.3',
 };

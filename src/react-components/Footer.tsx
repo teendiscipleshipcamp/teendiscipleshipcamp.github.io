@@ -4,7 +4,7 @@ import { config } from "../config";
 
 const DevInfo: FC = () => (
 	<section id='dev-info'>
-		<span id='label'>release-{config.version}</span>
+		<span id='label'>{config.version}</span>
 	</section>
 );
 

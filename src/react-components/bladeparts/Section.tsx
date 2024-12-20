@@ -2,7 +2,8 @@ import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
 import { AnimationSection } from "./AnimationSection.tsx";
 
-interface ImageSectionProps {
+interface Props {
+	id: string;
 	imageSrc: string;
 	title: string;
 	description: string;
@@ -10,8 +11,8 @@ interface ImageSectionProps {
 	linkText: string;
 }
 
-const ImageSectionInternal: FC<ImageSectionProps> = ({ imageSrc, title, description, link, linkText }) => (
-	<section>
+const SectionInternal: FC<Props> = ({ id, imageSrc, title, description, link, linkText }) => (
+	<section id={id}>
 		<div className='image'>
 			<img src={imageSrc} alt='' data-position='top center' />
 		</div>
@@ -33,4 +34,4 @@ const ImageSectionInternal: FC<ImageSectionProps> = ({ imageSrc, title, descript
 	</section>
 );
 
-export const ImageSection = observer(ImageSectionInternal);
+export const Section = observer(SectionInternal);
