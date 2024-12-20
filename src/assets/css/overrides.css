@@ -170,40 +170,40 @@ a {
 }
 
 /* @media (prefers-reduced-motion: no-preference) { */
-	#lead-or-help .inner,
-	#support .inner {
-		animation: text-slide-alt 1s linear forwards;
-		animation-timeline: view();
-		animation-range: entry;
-	}
+#lead-or-help .inner,
+#support .inner {
+	animation: text-slide-alt 1s linear forwards;
+	animation-timeline: view();
+	animation-range: entry;
+}
 
-	@keyframes text-slide-alt {
-		from {
-			opacity: 0;
-			transform: scale(0.9);
-		}
-		to {
-			opacity: 1;
-			transform: scale(1);
-		}
+@keyframes text-slide-alt {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
 	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
 /* } */
 
 /* @media (prefers-reduced-motion: no-preference) { */
-	#contact {
-		animation: contact-form-fade 1s linear forwards;
-		animation-timeline: view();
-		animation-range: entry;
-	}
+#contact {
+	animation: contact-form-fade 1s linear forwards;
+	animation-timeline: view();
+	animation-range: entry;
+}
 
-	@keyframes contact-form-fade {
-		from {
-			transform: scale(0.9);
-		}
-		to {
-			transform: scale(1);
-		}
+@keyframes contact-form-fade {
+	from {
+		transform: scale(0.9);
 	}
+	to {
+		transform: scale(1);
+	}
+}
 /* } */
 
 @keyframes blur {
