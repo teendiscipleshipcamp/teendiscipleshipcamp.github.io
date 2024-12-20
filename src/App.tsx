@@ -10,10 +10,10 @@ import { Menu } from './react-components/navigation/MainNav.tsx';
 import { Head } from './react-components/Head.tsx';
 
 const App: FC = () => (
-	<html>
+	<>
 		<Head />
-		<Menu />
 		<body className='is-preload'>
+			<Menu />
 			<div id='wrapper'>
 				<MainBanner />
 				<div id='main' role='main'>
@@ -25,7 +25,7 @@ const App: FC = () => (
 				<Footer />
 			</div>
 		</body>
-	</html>
+	</>
 );
 
 export default App;

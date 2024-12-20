@@ -29,7 +29,7 @@ const MenuInternal: FC = () => {
     }, [setIsOpen]);
 
     return (
-        <>
+        <nav>
             <div className={`menu-wrapper`}>
                 <div className='menu-items'>
                     <Logo />
@@ -60,7 +60,7 @@ const MenuInternal: FC = () => {
                     </div>
                 </div>
             )}
-        </>
+        </nav>
     );
 };
 
