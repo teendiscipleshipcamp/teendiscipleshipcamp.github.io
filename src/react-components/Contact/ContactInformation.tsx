@@ -1,7 +1,7 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
 import { FC } from "react";
-import { config } from "../config";
+import { config } from "../../config";
 
 const ContactPostalAddress: FC = () => (
         <span>

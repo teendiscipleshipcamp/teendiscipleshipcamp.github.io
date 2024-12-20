@@ -1,4 +1,4 @@
-import { ContactBlade } from './react-components/blades/ContactBlade.tsx';
+import { ContactBlade } from './react-components/Contact/ContactBlade.tsx';
 import { Footer } from './react-components/Footer.tsx';
 import { SupportBlade } from './react-components/blades/SupportBlade.tsx';
 import { SpotlightsBlade } from './react-components/blades/SpotlightsBlade.tsx';
