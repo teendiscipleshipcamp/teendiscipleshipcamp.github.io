@@ -1537,6 +1537,16 @@ a {
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
 }
 
+.image {
+	filter: grayscale(1);
+	transition: filter 250ms ease-out;
+	will-change: filter;
+}
+
+.image.active {
+	filter: unset;
+}
+
 /* Animations */
 .fade-in-section {
 	opacity: 0;
