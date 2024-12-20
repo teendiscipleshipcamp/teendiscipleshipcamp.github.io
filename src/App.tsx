@@ -6,13 +6,13 @@ import { MainBanner } from './react-components/MainBanner.tsx';
 import { FC } from 'react';
 import React from 'react';
 import { LeadOrHelpBlade } from './react-components/blades/LeadOrHelpBlade.tsx';
-import { MainNav } from './react-components/navigation/MainNav.tsx';
+import { Menu } from './react-components/navigation/MainNav.tsx';
 import { Head } from './react-components/Head.tsx';
 
 const App: FC = () => (
 	<html>
 		<Head />
-		<MainNav />
+		<Menu />
 		<body className='is-preload'>
 			<div id='wrapper'>
 				<MainBanner />

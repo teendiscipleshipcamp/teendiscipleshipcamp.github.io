@@ -13,7 +13,7 @@ const updatedMenuItems = [
     { href: '#contact', label: 'Contact us' }
 ];
 
-const MainNavInternal: FC = () => {
+const MenuInternal: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen((isOpen) => !isOpen);
 
@@ -65,4 +65,4 @@ const MainNavInternal: FC = () => {
 };
 
 
-export const MainNav = observer(MainNavInternal);
+export const Menu = observer(MenuInternal);

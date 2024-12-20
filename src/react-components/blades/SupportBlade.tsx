@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { BladeHeader } from './bladeparts/BladeHeader.tsx';
+import { BladeHeader } from '../bladeparts/BladeHeader.tsx';
 import React from 'react';
 import { observer } from 'mobx-react-lite';
 

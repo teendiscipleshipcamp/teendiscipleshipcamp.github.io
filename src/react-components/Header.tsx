@@ -5,7 +5,7 @@ const HeaderInternal: FC = () => (
 	<header id='header' className='alt'>
 		<a href='index.html' className='logo'>
 			<strong>
-				<img height='80px' width='420px' src='src/logo/campfire.svg' />
+				<img height='80px' width='420px' src='src/logo/campfire.svg' alt='Campfire logo' />
 			</strong>
 		</a>
 		<nav>

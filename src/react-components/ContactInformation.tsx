@@ -1,35 +1,26 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
 import { FC } from "react";
+import { config } from "../config";
 
-const ContactPostalAddress: FC = () => {
-    const line1 = '280 Molesworth Drive';
-    const line2 = 'Mangawhai Heads, 0505';
-    const line3 = 'New Zealand';
-
-    return (
+const ContactPostalAddress: FC = () => (
         <span>
-            {line1}
+            {config.address.line1}
             <br />
-            {line2}
+            {config.address.line2}
             <br />
-            {line3}
+            {config.address.line3}
         </span>
-    )
-};
+    );
 
-const ContactInformationInternal: FC = () => {
-    const contactEmail = 'teendiscipleshipcamp@gmail.com';
-    const contactPhone = '(09) 000-0000';
-
-	return (
+const ContactInformationInternal: FC = () => (
         <>
             <section>
                 <div className='contact-method'>
                     <span className='icon solid alt fa-envelope'></span>
                     <h3>Email</h3>
-                    <a href={`mailto:${contactEmail}`}>
-                        {contactEmail}
+                    <a href={`mailto:${config.contactEmail}`}>
+                        {config.contactEmail}
                     </a>
                 </div>
             </section>
@@ -37,7 +28,7 @@ const ContactInformationInternal: FC = () => {
                 <div className='contact-method'>
                     <span className='icon solid alt fa-phone'></span>
                     <h3>Phone</h3>
-                    <span>{contactPhone}</span>
+                    <span>{config.contactPhone}</span>
                 </div>
             </section>
             <section>
@@ -49,6 +40,5 @@ const ContactInformationInternal: FC = () => {
             </section>
         </>
 	);
-}
 
 export const ContactInformation = observer(ContactInformationInternal);

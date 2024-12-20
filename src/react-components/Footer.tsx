@@ -1,27 +1,34 @@
 import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
+import { config } from "../config";
+
+const DevInfo: FC = () => (
+	<section id='dev-info'>
+		<span id='label'>release-{config.version}</span>
+	</section>
+);
 
 const FooterInternal: FC = () => (
 	<footer id='footer'>
 		<div className='inner'>
 			<ul className='icons'>
 				<li>
-					<a href='#' className='icon brands alt fa-twitter'>
+					<a href='https://twitter.com' className='icon brands alt fa-twitter' target='_blank' rel='noopener noreferrer'>
 						<span className='label'>Twitter</span>
 					</a>
 				</li>
 				<li>
-					<a href='#' className='icon brands alt fa-facebook-f'>
+					<a href='https://facebook.com' className='icon brands alt fa-facebook-f' target='_blank' rel='noopener noreferrer'>
 						<span className='label'>Facebook</span>
 					</a>
 				</li>
 				<li>
-					<a href='#' className='icon brands alt fa-instagram'>
+					<a href='https://instagram.com' className='icon brands alt fa-instagram' target='_blank' rel='noopener noreferrer'>
 						<span className='label'>Instagram</span>
 					</a>
 				</li>
 				<li>
-					<a href='#' className='icon brands alt fa-linkedin-in'>
+					<a href='https://linkedin.com' className='icon brands alt fa-linkedin-in' target='_blank' rel='noopener noreferrer'>
 						<span className='label'>LinkedIn</span>
 					</a>
 				</li>
@@ -30,9 +37,7 @@ const FooterInternal: FC = () => (
 				</li>
 			</ul>
 		</div>
-		<section id='dev-info'>
-			<span id='label'>release-1.5.0</span>
-		</section>
+		<DevInfo />
 	</footer>
 
 );
