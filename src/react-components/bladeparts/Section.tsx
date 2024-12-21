@@ -19,7 +19,7 @@ const SectionInternal: FC<Props> = ({ id, imageSrc, title, description, link, li
 	return (
 		<section onMouseOver={toggleHover} onMouseOut={toggleHover} id={id}>
 			<div className={cn('image', { 'active': active })}>
-				<img src={imageSrc} alt='' data-position='top center' />
+				<img src={imageSrc} alt='' data-position='top center' loading="lazy"/>
 			</div>
 			<div className='content'>
 				<AnimationSection animation='fade-in-section' className='inner'>
