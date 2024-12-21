@@ -14,20 +14,10 @@ interface Props {
 
 const SectionInternal: FC<Props> = ({ id, imageSrc, title, description, link, linkText }) => {
 	const [active, setActive] = useState(false);
-
-	const onHover = () => {
-		console.log('Hover entered');
-		setActive(true);
-
-	};
-
-	const onHoverExit = () => {
-		console.log('Hover left');
-		setActive(false);
-	};
+	const toggleHover = () => setActive((active) => !active);
 
 	return (
-		<section id={id}>
+		<section onMouseOver={toggleHover} onMouseOut={toggleHover} id={id}>
 			<div className={cn('image', { 'active': active })}>
 				<img src={imageSrc} alt='' data-position='top center' />
 			</div>
@@ -39,7 +29,7 @@ const SectionInternal: FC<Props> = ({ id, imageSrc, title, description, link, li
 					<p>{description}</p>
 					<ul className='actions'>
 						<li>
-							<a onMouseOver={onHover} onMouseOut={onHoverExit} href={link} target="_blank" className='button' rel="noreferrer">
+							<a  href={link} target="_blank" className='button' rel="noreferrer">
 								{linkText}
 							</a>
 						</li>
