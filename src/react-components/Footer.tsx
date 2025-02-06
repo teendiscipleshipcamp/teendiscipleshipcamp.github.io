@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React, { FC } from "react";
-import { config } from "../config";
+import { config } from "../config.ts";
 
 const DevInfo: FC = () => (
 	<section id='dev-info'>

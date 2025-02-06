@@ -8,7 +8,7 @@ interface Props {
 	imageSrc: string;
 	title: string;
 	description: string;
-	link: string;
+	link?: string;
 	linkText: string;
 }
 
@@ -27,13 +27,14 @@ const SectionInternal: FC<Props> = ({ id, imageSrc, title, description, link, li
 						<h3>{title}</h3>
 					</header>
 					<p>{description}</p>
-					<ul className='actions'>
-						<li>
-							<a  href={link} target="_blank" className='button' rel="noreferrer">
-								{linkText}
-							</a>
-						</li>
-					</ul>
+					{link && (<ul className='actions'>
+							<li>
+								<a href={link} target="_blank" className='button' rel="noreferrer">
+									{linkText}
+								</a>
+							</li>
+						</ul>)
+					}
 				</AnimationSection>
 			</div>
 		</section>

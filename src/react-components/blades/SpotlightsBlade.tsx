@@ -4,6 +4,7 @@ import beliefImage from '../../images/belief_pic.jpg';
 import signUpImage from '../../images/scenery.jpg';
 import galleryImage from '../../images/culled.jpg';
 import { Section } from "../bladeparts/Section.tsx";
+import { config } from "../../config.ts";
 
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
@@ -24,10 +25,11 @@ const WhatWeBelieveSection: FC = () => {
 };
 
 const SignUpSection: FC = () => {
-	const camperSignUpLink = 'https://forms.gle/2qhEDvm1a9MwwcZTA';
 	const title = 'Sign up.';
 	const description = 'Keen to be a part of our upcoming camp? Sign up below, or contact us for more info!';
 	const linkText = 'Sign up';
+
+	const signUpEnabled = config.phase === 'upcoming';
 
 	return (
 		<Section
@@ -35,7 +37,7 @@ const SignUpSection: FC = () => {
 			imageSrc={signUpImage}
 			title={title}
 			description={description}
-			link={camperSignUpLink}
+			link={signUpEnabled ? config.campersSignUpForm : undefined}
 			linkText={linkText}
 		/>
 	);
@@ -52,7 +54,7 @@ const GallerySection: FC = () => {
 			imageSrc={galleryImage}
 			title={title}
 			description={description}
-			link={''}
+			link={config.galleryDriveUrl}
 			linkText={linkText}
 		/>
 	);
