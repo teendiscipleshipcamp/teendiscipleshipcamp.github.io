@@ -31,7 +31,7 @@ interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-	version: '1.5.6',
+	version: '1.5.7',
 	phase: 'upcoming',
 	siteTitle: 'Teen Discipleship Camp',
 	contactEmail: 'teendiscipleshipcamp@gmail.com',
@@ -51,6 +51,6 @@ export const config: SiteConfig = {
 	leadersSignUpForm: 'https://forms.gle/hi1pdECNMn1ddqQr7',
 	campersSignUpForm: 'https://forms.gle/hi1pdECNMn1ddqQr7',
 	featureFlags: {
-		socialMedia: true,
+		socialMedia: false,
 	},
 };
