@@ -15,7 +15,7 @@ const ContactPostalAddress: FC = () => (
 
 const ContactInformationInternal: FC = () => (
         <>
-            <section>
+            {config.contactEmail && (<section>
                 <div className='contact-method'>
                     <span className='icon solid alt fa-envelope'></span>
                     <h3>Email</h3>
@@ -23,14 +23,14 @@ const ContactInformationInternal: FC = () => (
                         {config.contactEmail}
                     </a>
                 </div>
-            </section>
-            <section>
+            </section>)}
+            {config.contactPhone && (<section>
                 <div className='contact-method'>
                     <span className='icon solid alt fa-phone'></span>
                     <h3>Phone</h3>
                     <span>{config.contactPhone}</span>
                 </div>
-            </section>
+            </section>)}
             <section>
                 <div className='contact-method'>
                     <span className='icon solid alt fa-home'></span>

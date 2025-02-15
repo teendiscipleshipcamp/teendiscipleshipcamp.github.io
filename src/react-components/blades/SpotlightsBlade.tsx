@@ -9,7 +9,7 @@ import { config } from "../../config.ts";
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
 	const title = 'What we believe.';
-	const description = "It’s no secret that many of our teens leave home, enter the world, and walk away from their faith. We want to engage our teens in wrestling with questions they may have and face.";
+	const description = "It’s no secret that many teens leave home, enter the world, and walk away from their faith. We want to engage teens in wrestling with questions they have and face.";
 	const linkText = 'statement of faith';
 
 	return (

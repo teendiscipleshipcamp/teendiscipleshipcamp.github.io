@@ -11,7 +11,7 @@ const LeadOrHelpInternal: FC = () => {
         <section id='lead-or-help'>
             <AnimationSection animation='fade-in-section'  className='inner'>
                 <BladeHeader content='Lead.' />
-                <p>Keen to lead at one of our camps, or use your gifts to help? We're always looking for more people to join our team!
+                <p>Keen to lead at one of our camps, or use your gifts to help?
                 Reach out to us below if you have any questions or would like to get involved, or sign up to lead at our next camp below.</p>
                 {signUpEnabled &&(<ul className='actions'>
                         <li>
