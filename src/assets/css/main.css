@@ -1592,3 +1592,40 @@ a {
 	visibility: visible;
 	filter: blur(0);
 }
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 80%;
+	height: 80%;
+	max-width:650px;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 8px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+/* .ReactModalPortal {
+	z-index: 9999999999;
+	position: fixed;
+} */
+
+.ReactModal__Overlay {
+	z-index: 9999999999;
+	position: fixed;
+	/* pointer-events: none; */
+	/* position: fixed; */
+	/* top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0; */
+	/* background-color: rgba(0, 0, 0, 0.5); */
+}
