@@ -1,52 +1,56 @@
-import { observer } from "mobx-react-lite";
-import React, { useRef } from "react";
-import { FC } from "react";
+import { observer } from 'mobx-react-lite';
+import React, { useRef } from 'react';
+import { FC } from 'react';
 import emailjs from '@emailjs/browser';
 import { Bounce, ToastContainer, ToastPosition, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { config } from "../../config.ts";
+import { config } from '../../config.ts';
 
 const props = {
-	position: "bottom-left" as ToastPosition,
+	position: 'bottom-left' as ToastPosition,
 	autoClose: 5000,
 	hideProgressBar: false,
 	closeOnClick: true,
 	pauseOnHover: false,
 	draggable: false,
 	progress: undefined,
-	theme: "light",
+	theme: 'light',
 	transition: Bounce,
 	closeButton: false,
 };
 
-
 const ContactFormInternal: FC = () => {
-
 	const form = useRef<HTMLFormElement | null>(null);
 
-	const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } = config.emailJS;
-  
+	const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } =
+		config.emailJS;
+
 	const sendEmail = (e) => {
-	  e.preventDefault();
+		e.preventDefault();
 
-	  if (form.current === null) return;
+		if (form.current === null) return;
 
-	  const loadedVariablesSuccessfully = EMAILJS_SERVICE_ID !== undefined && EMAILJS_TEMPLATE_ID !== undefined && EMAILJS_PUBLIC_KEY !== undefined;
-	  
-	  if (!loadedVariablesSuccessfully) return toast.error("Sorry, couldn't load EmailJS", props);
-  
-	  emailjs
-		.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, {
-		  publicKey: EMAILJS_PUBLIC_KEY,
-		})
-		.then(
-		  () => toast.success("Thank you!", props),
-		  (_) => toast.error("Sorry, try again", props),
-		).finally(() => form.current?.reset());
+		const loadedVariablesSuccessfully =
+			EMAILJS_SERVICE_ID !== undefined &&
+			EMAILJS_TEMPLATE_ID !== undefined &&
+			EMAILJS_PUBLIC_KEY !== undefined;
+
+		if (!loadedVariablesSuccessfully)
+			return toast.error("Sorry, couldn't load EmailJS", props);
+
+		emailjs
+			.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, {
+				publicKey: EMAILJS_PUBLIC_KEY,
+			})
+			.then(
+				() => toast.success('Thank you!', props),
+				(_) => toast.error('Sorry, try again', props)
+			)
+			.finally(() => form.current?.reset());
 	};
 
 	return (
-        <>
+		<>
 			<form ref={form} onSubmit={sendEmail}>
 				<div className='fields'>
 					<div className='field half'>
@@ -72,8 +76,8 @@ const ContactFormInternal: FC = () => {
 				</ul>
 			</form>
 			<ToastContainer />
- 		</>
+		</>
 	);
-}
+};
 
 export const ContactForm = observer(ContactFormInternal);
