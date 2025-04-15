@@ -39,6 +39,7 @@ const SignUpSection: FC = () => {
 			description={description}
 			link={signUpEnabled ? config.campersSignUpForm : undefined}
 			linkText={linkText}
+			isLightbox={true}
 		/>
 	);
 };
