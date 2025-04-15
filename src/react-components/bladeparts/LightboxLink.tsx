@@ -2,6 +2,7 @@ import { useToggle } from 'usehooks-ts';
 import { observer } from 'mobx-react-lite';
 import React, { FC, useState } from 'react';
 import Modal from 'react-modal';
+import { FadeLoader } from 'react-spinners';
 
 interface Props {
 	link?: string;
@@ -55,8 +56,9 @@ const LightboxLinkInternal: FC<Props> = ({ link, text }) => {
 					frameborder='0'
 					marginheight='0'
 					marginwidth='0'
+					loading='lazy'
 				>
-					Loading…
+					<FadeLoader color='#003366' />
 				</iframe>
 			</Modal>
 		</>
