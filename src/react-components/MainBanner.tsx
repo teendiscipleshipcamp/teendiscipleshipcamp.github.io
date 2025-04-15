@@ -16,17 +16,17 @@ const MainBannerInternal: FC = () => {
 				<div className='content'>
 					<ul className='actions'>
 						<li>
-							{signUpEnabled && 
-								(<a href='#sign-up' className='button next scrolly'>
+							{signUpEnabled && (
+								<a href='#sign-up' className='button next scrolly'>
 									Sign up
-								</a>)
-							}
+								</a>
+							)}
 						</li>
 					</ul>
 				</div>
 			</div>
 		</section>
-	);	
+	);
 };
 
 export const MainBanner = observer(MainBannerInternal);
