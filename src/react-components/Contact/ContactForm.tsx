@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { FC } from 'react';
 import emailjs from '@emailjs/browser';
 import { Bounce, ToastContainer, ToastPosition, toast } from 'react-toastify';
@@ -8,13 +8,13 @@ import { config } from '../../config.ts';
 
 const props = {
 	position: 'bottom-left' as ToastPosition,
-	autoClose: 5000,
+	autoClose: 1500,
 	hideProgressBar: false,
 	closeOnClick: true,
 	pauseOnHover: false,
 	draggable: false,
 	progress: undefined,
-	theme: 'light',
+	theme: 'dark',
 	transition: Bounce,
 	closeButton: false,
 };

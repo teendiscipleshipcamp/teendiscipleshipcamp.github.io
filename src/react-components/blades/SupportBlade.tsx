@@ -9,7 +9,7 @@ const SupportBladeInternal: FC = () => (
 		<AnimationSection animation='fade-in-section' className='inner'>
 			<BladeHeader content='Support a camper.' />
 			<p>
-				As our heart is to ensure young people are able to come to camp, we keep
+				Our heart is to ensure young people are able to come to camp so we keep
 				costs to a minimum.
 				<br />
 				If you would like to sponsor someone to come to camp, or would love to

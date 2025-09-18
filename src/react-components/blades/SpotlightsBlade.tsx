@@ -26,12 +26,16 @@ const WhatWeBelieveSection: FC = () => {
 };
 
 const SignUpSection: FC = () => {
-	const title = 'Sign up.';
-	const description =
-		'Keen to be a part of our upcoming camp? Sign up below, or contact us for more info!';
-	const linkText = 'Sign up';
+	const { phase, campersSignUpForm } = config;
+	const signUpEnabled = phase === 'upcoming';
 
-	const signUpEnabled = config.phase === 'upcoming';
+	const link = signUpEnabled ? campersSignUpForm : undefined;
+
+	const title = 'Sign up.';
+	const linkText = 'Sign up';
+	const description = link
+		? 'Keen to be a part of our upcoming camp? Sign up below, or contact us for more info!'
+		: "Keep an eye out for our next camp's details and sign-up link here soon...";
 
 	return (
 		<Section
@@ -39,7 +43,7 @@ const SignUpSection: FC = () => {
 			imageSrc={signUpImage}
 			title={title}
 			description={description}
-			link={signUpEnabled ? config.campersSignUpForm : undefined}
+			link={link}
 			linkText={linkText}
 		/>
 	);
@@ -47,7 +51,7 @@ const SignUpSection: FC = () => {
 
 const GallerySection: FC = () => {
 	const title = 'Gallery.';
-	const description = 'Check out pictures from camp.';
+	const description = 'Check out pictures from last camp.';
 	const linkText = 'See Them';
 
 	return (
