@@ -3,7 +3,7 @@ import React from 'react';
 import { FC } from 'react';
 import { ContactForm } from './ContactForm.tsx';
 import { ContactInformation } from './ContactInformation.tsx';
-import { AnimationSection } from '../bladeparts/AnimationSection.tsx';
+import { AnimationSection } from '../blades/components/AnimationSection.tsx';
 
 const ContactBladeInternal: FC = () => {
 	return (

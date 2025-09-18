@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import React, { PropsWithChildren } from 'react';
+import { PropsWithChildren } from 'react';
 import { FC, useEffect, useRef, useState } from 'react';
 import cn from 'classnames';
 
