@@ -25,7 +25,7 @@ const ContactFormInternal: FC = () => {
 	const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } =
 		config.emailJS;
 
-	const sendEmail = (e) => {
+	const sendEmail = (e: any) => {
 		e.preventDefault();
 
 		if (form.current === null) return;

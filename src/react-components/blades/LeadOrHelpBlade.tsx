@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
-import { BladeHeader } from '../bladeparts/BladeHeader.tsx';
+import { BladeHeader } from './components/BladeHeader.tsx';
 import React, { FC } from 'react';
-import { AnimationSection } from '../bladeparts/AnimationSection.tsx';
+import { AnimationSection } from './components/AnimationSection.tsx';
 import { config } from '../../config.ts';
 
 const LeadOrHelpInternal: FC = () => {

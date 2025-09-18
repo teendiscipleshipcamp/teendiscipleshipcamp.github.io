@@ -4,10 +4,10 @@ import { SupportBlade } from './react-components/blades/SupportBlade.tsx';
 import { SpotlightsBlade } from './react-components/blades/SpotlightsBlade.tsx';
 import { MainBanner } from './react-components/MainBanner.tsx';
 import { FC } from 'react';
-import React from 'react';
 import { LeadOrHelpBlade } from './react-components/blades/LeadOrHelpBlade.tsx';
 import { Menu } from './react-components/navigation/MainNav.tsx';
 import { Head } from './react-components/Head.tsx';
+import { NextCampInfoBlade } from './react-components/blades/NextCampInfoBlade.tsx';
 
 const App: FC = () => (
 	<>
@@ -18,6 +18,7 @@ const App: FC = () => (
 				<MainBanner />
 				<div id='main' role='main'>
 					<SpotlightsBlade />
+					<NextCampInfoBlade />
 					<LeadOrHelpBlade />
 					<SupportBlade />
 				</div>

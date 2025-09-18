@@ -1527,7 +1527,8 @@ a {
 #lead-or-help {
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
 }
-#lead-or-help .inner {
+
+#lead-or-help .inner, #next-camp .inner {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -1591,4 +1592,9 @@ a {
 	opacity: 1;
 	visibility: visible;
 	filter: blur(0);
+}
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
 }

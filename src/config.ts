@@ -14,6 +14,7 @@ interface Address {
 
 interface FeatureFlags {
 	socialMedia: boolean;
+	showNextCampInfo: boolean;
 }
 
 interface SiteConfig {
@@ -31,7 +32,7 @@ interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-	version: '1.5.9',
+	version: '1.6.0',
 	phase: 'upcoming',
 	siteTitle: 'Teen Discipleship Camp',
 	contactEmail: 'teendiscipleshipcamp@gmail.com',
@@ -52,5 +53,6 @@ export const config: SiteConfig = {
 	campersSignUpForm: '',
 	featureFlags: {
 		socialMedia: false,
+		showNextCampInfo: false,
 	},
 };
