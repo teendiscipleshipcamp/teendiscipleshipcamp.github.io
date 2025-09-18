@@ -1525,7 +1525,7 @@ a {
 }
 
 #lead-or-help {
-	background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
+	background: rgba(0, 0, 0, 0.2);
 }
 #lead-or-help .inner {
 	display: flex;
@@ -1534,7 +1534,7 @@ a {
 }
 
 #sign-up {
-	background: linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent);
+	background: rgba(0, 0, 0, 0.2);
 }
 
 .image {
@@ -1613,19 +1613,29 @@ a {
 	overflow: hidden;
 }
 
-/* .ReactModalPortal {
-	z-index: 9999999999;
-	position: fixed;
-} */
+.modal-content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+}
+
+.modal-actions {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	padding: 12px;
+	box-shadow: 0 0 4 12px black;
+	overflow: hidden; 
+}
+
+.modal-button {
+	color: var(--main-background-blue);
+	box-shadow: inset 0 0 0 2px var(--main-background-blue);
+}
 
 .ReactModal__Overlay {
 	z-index: 9999999999;
 	position: fixed;
-	/* pointer-events: none; */
-	/* position: fixed; */
-	/* top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0; */
-	/* background-color: rgba(0, 0, 0, 0.5); */
 }
