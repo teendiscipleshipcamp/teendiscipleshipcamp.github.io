@@ -14,7 +14,6 @@ interface Address {
 
 interface FeatureFlags {
 	socialMedia: boolean;
-	showNextCampInfo: boolean;
 }
 
 interface SiteConfig {
@@ -22,6 +21,7 @@ interface SiteConfig {
 	siteTitle: string;
 	contactEmail: string;
 	contactPhone: string;
+	cost: number;
 	address: Address;
 	emailJS: EmailJSConfig;
 	version: string;
@@ -32,14 +32,15 @@ interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-	version: '1.6.0',
-	phase: 'upcoming',
+	version: '1.6.1',
+	phase: 'hibernation',
 	siteTitle: 'Teen Discipleship Camp',
 	contactEmail: 'teendiscipleshipcamp@gmail.com',
 	contactPhone: '',
+	cost: 65,
 	address: {
 		line1: '280 Molesworth Drive',
-		line2: 'Mangawhai Heads, 0505',
+		line2: 'Mangawhai Heads, 5011',
 		line3: 'New Zealand',
 	},
 	emailJS: {
@@ -53,6 +54,5 @@ export const config: SiteConfig = {
 	campersSignUpForm: '',
 	featureFlags: {
 		socialMedia: false,
-		showNextCampInfo: false,
 	},
 };

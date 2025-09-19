@@ -36,11 +36,10 @@ const WhatWeBelieveSection: FC = () => {
 };
 
 const SignUpSection: FC = () => {
-	const { phase, campersSignUpForm, featureFlags } = config;
+	const { phase, campersSignUpForm } = config;
 	const signUpEnabled = phase === 'upcoming';
 
 	const link = signUpEnabled ? campersSignUpForm : undefined;
-	const showNextCampInfo = featureFlags.showNextCampInfo;
 
 	const title = 'Sign up.';
 	const linkText = 'Sign up';
@@ -48,7 +47,7 @@ const SignUpSection: FC = () => {
 		? 'Keen to be a part of our upcoming camp? Sign up below, or contact us for more info!'
 		: "Keep an eye out for our next camp's details and sign-up link here soon...";
 
-	const secondaryLinkText = 'Next Camp Info';
+	const secondaryLinkText = 'More Info';
 
 	return (
 		<Section
@@ -64,7 +63,7 @@ const SignUpSection: FC = () => {
 					</a>
 				</li>
 			)}
-			{showNextCampInfo && (
+			{signUpEnabled && (
 				<li>
 					<a
 						href={'#next-camp'}

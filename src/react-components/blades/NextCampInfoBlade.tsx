@@ -6,20 +6,38 @@ import { AnimationSection } from './components/AnimationSection.tsx';
 import { scrollToSectionHandler } from '../../helpers/scrollToSection.ts';
 
 const NextCampInfoInternal: FC = () => {
-	const { featureFlags } = config;
-	const showSection = featureFlags.showNextCampInfo;
+	const { cost, phase, campersSignUpForm } = config;
+	const showSection = phase === 'upcoming';
 
 	if (!showSection) {
 		return null;
 	}
 
+	const costString = cost > 0 ? `$${cost}` : 'Free!';
+
 	const title = 'Next Camp Key Info.';
 	const description = 'Here’s what you need to know for next camp...';
+
+	const link = showSection ? campersSignUpForm : undefined;
+	const linkText = 'Sign up';
 
 	return (
 		<section id='next-camp'>
 			<AnimationSection animation='fade-in-section' className='inner'>
 				<BladeHeader content={title} />
+				{link && (
+					<>
+						<a
+							href={link}
+							target={'_blank'}
+							className='button'
+							rel='noreferrer'
+						>
+							{linkText}
+						</a>
+						<br />
+					</>
+				)}
 				<p>{description}</p>
 				<p>
 					<b>What:</b>&emsp;Our next TDC! We'll be tackling more apologetics
@@ -42,7 +60,7 @@ const NextCampInfoInternal: FC = () => {
 					<br />
 					<b>Where:</b>&emsp;Campbell Park Christian Camp
 					<br />
-					<b>Cost:</b>&emsp;$60*
+					<b>Cost:</b>&emsp;{costString}*
 				</p>
 				*We don't want anyone to miss out due to cost, so if it's an issue
 				<a
