@@ -7,11 +7,12 @@ import cn from 'classnames';
 
 const updatedMenuItems = [
 	{ href: '#banner', label: 'Home' },
-	{ href: '#what-we-believe', label: 'What we believe' },
-	{ href: '#sign-up', label: 'Sign up' },
+	{ href: '#whats-camp-about', label: 'About Us' },
+	{ href: '#what-we-believe', label: 'Our Beliefs' },
+	{ href: '#sign-up', label: 'Sign Up' },
 	{ href: '#gallery', label: 'Gallery' },
-	{ href: '#support', label: 'Support us' },
-	{ href: '#contact', label: 'Contact us' },
+	{ href: '#support', label: 'Support Us' },
+	{ href: '#contact', label: 'Contact Us' },
 ];
 
 const MenuInternal: FC = () => {

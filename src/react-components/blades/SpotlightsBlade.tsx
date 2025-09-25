@@ -1,5 +1,6 @@
 import { observer } from 'mobx-react-lite';
-import React, { FC } from 'react';
+import { FC } from 'react';
+import bibleReadingImage from '../../images/bible.jpg';
 import beliefImage from '../../images/belief_pic.jpg';
 import signUpImage from '../../images/scenery.jpg';
 import galleryImage from '../../images/culled.jpg';
@@ -7,17 +8,55 @@ import { Section } from './components/Section.tsx';
 import { config } from '../../config.ts';
 import { scrollToSectionHandler } from '../../helpers/scrollToSection.ts';
 
+const AboutUsSection: FC = () => {
+	const title = 'About us.';
+	const description = (
+		<p>
+			This camp was born out of the vision to build, grow, and equip our young
+			people to take their faith seriously.
+			<br />
+			<br />
+			We want to engage our teens in wrestling with the questions that they may
+			have and face.
+			<br />
+			Our aim is to equip them with the resources and knowledge to make a
+			defense to anyone who asks for the reason for the hope that is in them (1
+			Peter 3 v15).
+		</p>
+	);
+
+	return (
+		<Section
+			id='whats-camp-about'
+			imageSrc={beliefImage}
+			title={title}
+			description={description}
+		/>
+	);
+};
+
 const WhatWeBelieveSection: FC = () => {
 	const statementOfFaithLink = 'https://www.nae.org/statement-of-faith/';
 	const title = 'What we believe.';
-	const description =
-		'It’s no secret that many teens leave home, enter the world, and walk away from their faith. We want to engage teens in wrestling with questions they have and face.';
+	const description = (
+		<p>
+			It’s no secret that many of our teens leave home, go out into the world,
+			and walk away from their faith.
+			<br />
+			<br />
+			Our desire is to grow them to be dedicated disciples of Christ, teaching
+			them to obey all that Christ has commanded us (Matthew 28 v20).
+			<br />
+			We thoroughly believe that this work can only be done by the Holy Spirit
+			working within them.
+		</p>
+	);
 	const linkText = 'statement of faith';
 
 	return (
 		<Section
 			id='what-we-believe'
-			imageSrc={beliefImage}
+			imageSrc={bibleReadingImage}
 			title={title}
 			description={description}
 		>
@@ -42,10 +81,13 @@ const SignUpSection: FC = () => {
 	const link = signUpEnabled ? campersSignUpForm : undefined;
 
 	const title = 'Sign up.';
-	const linkText = 'Sign up';
-	const description = link
-		? 'Keen to be a part of our upcoming camp? Sign up below, or contact us for more info!'
-		: "Keep an eye out for our next camp's details and sign-up link here soon...";
+	const description = link ? (
+		<p>Keen to be a part of our upcoming camp? Scroll down for more info!</p>
+	) : (
+		<p>
+			Keep an eye out for our next camp's details and sign-up link here soon...
+		</p>
+	);
 
 	const secondaryLinkText = 'More Info';
 
@@ -56,13 +98,6 @@ const SignUpSection: FC = () => {
 			title={title}
 			description={description}
 		>
-			{link && (
-				<li>
-					<a href={link} target={'_blank'} className='button' rel='noreferrer'>
-						{linkText}
-					</a>
-				</li>
-			)}
 			{signUpEnabled && (
 				<li>
 					<a
@@ -82,7 +117,7 @@ const SignUpSection: FC = () => {
 
 const GallerySection: FC = () => {
 	const title = 'Gallery.';
-	const description = 'Check out pictures from last camp.';
+	const description = <p>Check out pictures from last camp.</p>;
 	const linkText = 'See Them';
 
 	return (
@@ -108,6 +143,7 @@ const GallerySection: FC = () => {
 
 const SpotlightsBladeInternal: FC = () => (
 	<section className='spotlights'>
+		<AboutUsSection />
 		<WhatWeBelieveSection />
 		<SignUpSection />
 		<GallerySection />

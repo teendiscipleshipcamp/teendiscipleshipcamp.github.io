@@ -32,7 +32,7 @@ interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-	version: '1.6.2',
+	version: '1.6.3',
 	phase: 'hibernation',
 	siteTitle: 'Teen Discipleship Camp',
 	contactEmail: 'teendiscipleshipcamp@gmail.com',
@@ -51,7 +51,7 @@ export const config: SiteConfig = {
 	galleryDriveUrl:
 		'https://drive.google.com/drive/folders/1S6pB02WtUkOnEqfugnz8i87b4P-Sb1zp?usp=sharing',
 	leadersSignUpForm: '',
-	campersSignUpForm: '',
+	campersSignUpForm: 'https://forms.gle/ebqQ13Xjsm6btAzJ9',
 	featureFlags: {
 		socialMedia: false,
 	},

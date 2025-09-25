@@ -18,6 +18,19 @@ const NextCampInfoInternal: FC = () => {
 	const title = 'Next Camp Key Info.';
 	const description = 'Here’s what you need to know for next camp...';
 
+	const subtitle = (
+		<>
+			<p style={{ textAlign: 'center' }}>
+				Welcome back to another epic camp! <br />
+				This camp we will continue to wrestle with the deeper questions of life.
+				<br />
+				Expect plenty of fun activities, morning boot camps (optional), great
+				yarns, and plenty of good food!
+			</p>
+			<p>{description}</p>
+		</>
+	);
+
 	const link = showSection ? campersSignUpForm : undefined;
 	const linkText = 'Sign up';
 
@@ -25,20 +38,7 @@ const NextCampInfoInternal: FC = () => {
 		<section id='next-camp'>
 			<AnimationSection animation='fade-in-section' className='inner'>
 				<BladeHeader content={title} />
-				{link && (
-					<>
-						<a
-							href={link}
-							target={'_blank'}
-							className='button'
-							rel='noreferrer'
-						>
-							{linkText}
-						</a>
-						<br />
-					</>
-				)}
-				<p>{description}</p>
+				{subtitle}
 				<p>
 					<b>What:</b>&emsp;Our next TDC! We'll be tackling more apologetics
 					this camp with...
@@ -70,6 +70,21 @@ const NextCampInfoInternal: FC = () => {
 				>
 					please reach out.
 				</a>
+				{link && (
+					<>
+						<br />
+						<br />
+						<a
+							href={link}
+							target={'_blank'}
+							className='button'
+							rel='noreferrer'
+						>
+							{linkText}
+						</a>
+						<br />
+					</>
+				)}
 			</AnimationSection>
 		</section>
 	);

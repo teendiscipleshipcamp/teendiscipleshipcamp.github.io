@@ -21,6 +21,12 @@ const HeadInternal: FC = () => (
 		/>
 		<link
 			rel='preload'
+			href='/images/bible-reading.jpg'
+			as='image'
+			fetchPriority='high'
+		/>
+		<link
+			rel='preload'
 			href='/images/bonfire.jpg'
 			as='image'
 			fetchPriority='high'

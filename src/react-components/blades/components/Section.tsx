@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite';
-import { FC, PropsWithChildren, useState } from 'react';
+import React, { FC, PropsWithChildren, ReactNode, useState } from 'react';
 import { AnimationSection } from './AnimationSection.tsx';
 import cn from 'classnames';
 
@@ -7,7 +7,7 @@ interface Props {
 	id: string;
 	imageSrc?: string;
 	title: string;
-	description: string;
+	description: ReactNode;
 }
 
 const SectionInternal: FC<PropsWithChildren<Props>> = ({
@@ -37,7 +37,7 @@ const SectionInternal: FC<PropsWithChildren<Props>> = ({
 					<header className='major'>
 						<h3>{title}</h3>
 					</header>
-					<p>{description}</p>
+					{description}
 					{children && <ul className='actions'>{children}</ul>}
 				</AnimationSection>
 			</div>
