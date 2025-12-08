@@ -1406,9 +1406,10 @@ button:disabled,
 	top: 0;
 	width: 100%;
 	z-index: 99999999999;
-	padding: 0 24px;
+	padding: 24px 36px;
 	transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 	opacity: 1;
+	padding-right: 5%;
 }
 
 .menu-wrapper.scrolled-up {
@@ -1432,6 +1433,12 @@ button:disabled,
 	align-items: center;
 	padding: 24px 0;
 }
+
+.desktop-menu-items {
+	display: flex;
+	gap: 30px;
+}
+
 
 @media screen and (max-width: 980px) {
 	.menu-wrapper {
