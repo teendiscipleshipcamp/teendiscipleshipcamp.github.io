@@ -31,8 +31,8 @@ interface SiteConfig {
 }
 
 export const config: SiteConfig = {
-	version: '1.6.9',
-	phase: 'upcoming', // TODO hibernation
+	version: '1.7.0',
+	phase: 'hibernation',
 	siteTitle: 'Teen Discipleship Camp',
 	contactEmail: 'teendiscipleshipcamp@gmail.com',
 	contactPhone: '',
