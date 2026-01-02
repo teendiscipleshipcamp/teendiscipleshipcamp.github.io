@@ -1406,9 +1406,10 @@ button:disabled,
 	top: 0;
 	width: 100%;
 	z-index: 99999999999;
-	padding: 0 24px;
+	padding: 24px 36px;
 	transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 	opacity: 1;
+	padding-right: 5%;
 }
 
 .menu-wrapper.scrolled-up {
@@ -1432,6 +1433,12 @@ button:disabled,
 	align-items: center;
 	padding: 24px 0;
 }
+
+.desktop-menu-items {
+	display: flex;
+	gap: 30px;
+}
+
 
 @media screen and (max-width: 980px) {
 	.menu-wrapper {
@@ -1465,6 +1472,23 @@ button:disabled,
 	letter-spacing: 3px;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 16px;
+}
+
+@media screen and (max-width: 736px) {
+	.overlay .modal {
+		height: unset;
+		width: unset;
+		border-radius: none;
+		max-width: unset;
+	}
+	.overlay {
+		height: unset;
+		width: unset;
+		border-radius: none;
+		max-width: unset;
+		background-color: white;;
+		padding: 2em 0;
+	}
 }
 
 .overlay {
@@ -1520,14 +1544,15 @@ a {
 	);
 }
 
-#support {
+#support, #next-camp {
 	background-color: #22517055;
 }
 
 #lead-or-help {
 	background: rgba(0, 0, 0, 0.2);
 }
-#lead-or-help .inner {
+
+#lead-or-help .inner, #next-camp .inner {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -1611,6 +1636,7 @@ a {
 	border-radius: 8px;
 	padding: 10px;
 	overflow: hidden;
+	overscroll-behavior: contain
 }
 
 .modal-content {
@@ -1628,14 +1654,35 @@ a {
 	padding: 12px;
 	box-shadow: 0 0 4 12px black;
 	overflow: hidden; 
+	z-index: 9999999;
+	justify-content: space-between;
 }
 
 .modal-button {
 	color: var(--main-background-blue);
-	box-shadow: inset 0 0 0 2px var(--main-background-blue);
+	box-shadow: unset;
+	text-transform: unset;
+	font-weight: unset;
+	line-height: unset;
+	padding: unset;
+	padding: 8px;
+
+	&:hover {
+		box-shadow: unset;
+	}
+}
+
+.modal-iframe {
+	border: unset;
 }
 
 .ReactModal__Overlay {
 	z-index: 9999999999;
 	position: fixed;
 }
+
+.link {
+	text-decoration: underline;
+	cursor: pointer;
+}
+

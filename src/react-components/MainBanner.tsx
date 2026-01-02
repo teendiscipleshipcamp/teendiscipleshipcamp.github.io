@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
-import React from 'react';
 import { FC } from 'react';
 import { config } from '../config.ts';
+import { scrollToSectionHandler } from '../helpers/scrollToSection.ts';
 
 const MainBannerInternal: FC = () => {
 	const signUpEnabled = config.phase === 'upcoming';
@@ -16,17 +16,21 @@ const MainBannerInternal: FC = () => {
 				<div className='content'>
 					<ul className='actions'>
 						<li>
-							{signUpEnabled && 
-								(<a href='#sign-up' className='button next scrolly'>
+							{signUpEnabled && (
+								<a
+									href='#sign-up'
+									onClick={(e) => scrollToSectionHandler(e, '#sign-up')}
+									className='button next scrolly'
+								>
 									Sign up
-								</a>)
-							}
+								</a>
+							)}
 						</li>
 					</ul>
 				</div>
 			</div>
 		</section>
-	);	
+	);
 };
 
 export const MainBanner = observer(MainBannerInternal);

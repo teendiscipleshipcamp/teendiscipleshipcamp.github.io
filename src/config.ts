@@ -21,24 +21,25 @@ interface SiteConfig {
 	siteTitle: string;
 	contactEmail: string;
 	contactPhone: string;
+	cost: number;
 	address: Address;
 	emailJS: EmailJSConfig;
 	version: string;
 	galleryDriveUrl: string;
-	leadersSignUpForm: string;
 	campersSignUpForm: string;
 	featureFlags: FeatureFlags;
 }
 
 export const config: SiteConfig = {
-	version: '1.5.7',
-	phase: 'upcoming',
+	version: '1.6.9',
+	phase: 'upcoming', // TODO hibernation
 	siteTitle: 'Teen Discipleship Camp',
 	contactEmail: 'teendiscipleshipcamp@gmail.com',
 	contactPhone: '',
+	cost: 65,
 	address: {
 		line1: '280 Molesworth Drive',
-		line2: 'Mangawhai Heads, 0505',
+		line2: 'Mangawhai Heads, 5011',
 		line3: 'New Zealand',
 	},
 	emailJS: {
@@ -48,8 +49,7 @@ export const config: SiteConfig = {
 	},
 	galleryDriveUrl:
 		'https://drive.google.com/drive/folders/1S6pB02WtUkOnEqfugnz8i87b4P-Sb1zp?usp=sharing',
-	leadersSignUpForm: 'https://forms.gle/hi1pdECNMn1ddqQr7',
-	campersSignUpForm: 'https://forms.gle/hi1pdECNMn1ddqQr7',
+	campersSignUpForm: 'https://forms.gle/ebqQ13Xjsm6btAzJ9', // Change to embed link
 	featureFlags: {
 		socialMedia: false,
 	},
